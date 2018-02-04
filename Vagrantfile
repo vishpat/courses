@@ -7,10 +7,6 @@ unless Vagrant.has_plugin?("vagrant-hostmanager")
 end
 
 provision = <<SCRIPT
-export http_proxy=http://proxy.lbs.alcatel-lucent.com:8000
-export https_proxy=https://proxy.lbs.alcatel-lucent.com:8000
-echo "http_proxy=$http_proxy" >> /etc/environment
-echo "https_proxy=$https_proxy" >> /etc/environment
 
 curl http://files.fast.ai/setup/paperspace | bash
 
